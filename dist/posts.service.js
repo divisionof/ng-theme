@@ -1,4 +1,4 @@
-System.register(['@angular/core', './posts.component'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/http'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,31 +10,32 @@ System.register(['@angular/core', './posts.component'], function(exports_1, cont
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, posts_component_1;
-    var AppComponent;
+    var core_1, http_1;
+    var PostsService;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (posts_component_1_1) {
-                posts_component_1 = posts_component_1_1;
+            function (http_1_1) {
+                http_1 = http_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            PostsService = (function () {
+                function PostsService(http) {
+                    this.http = http;
+                    this._wpBase = 'http://ng.dev/wp-json/wp/v2/';
                 }
-                AppComponent = __decorate([
-                    core_1.Component({
-                        selector: 'my-app',
-                        template: "\n    <h1>My First Angular 2 App</h1>\n    <router-outlet></router-outlet>\n  ",
-                        directives: [posts_component_1.PostsComponent]
-                    }), 
-                    __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                PostsService.prototype.getPosts = function () {
+                    return this.http.get(this._wpBase + 'posts');
+                };
+                PostsService = __decorate([
+                    core_1.Injectable(), 
+                    __metadata('design:paramtypes', [http_1.Http])
+                ], PostsService);
+                return PostsService;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("PostsService", PostsService);
         }
     }
 });
