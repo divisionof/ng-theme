@@ -3,7 +3,6 @@ import { Http } from '@angular/http';
 
 @Injectable()
 export class PostsService {
-  posts: any;
   constructor(private http: Http) { }
 
   private _wpBase = 'http://ng.dev/wp-json/wp/v2/';
