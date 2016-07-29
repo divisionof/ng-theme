@@ -3,7 +3,7 @@ import { provideRouter, RouterConfig } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { PostsComponent } from './posts.component';
 import { CustomPostsComponent } from './custom-posts.component';
-import { SamplePageComponent } from './sample-page/sample-page.component';
+import { SamplePageComponent } from './sample-page.component';
 
 
 const routes: RouterConfig = [

@@ -1,11 +1,7 @@
-/**
- * System configuration for Angular 2 samples
- * Adjust as necessary for your application needs.
- */
 (function(global) {
   // map tells the System loader where to look for things
   var map = {
-    'app':                        'dist/js', // 'app',
+    'app':                        'assets/scripts/js',
     '@angular':                   'node_modules/@angular',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     'rxjs':                       'node_modules/rxjs'
@@ -41,7 +37,7 @@
   // Add package entries for angular packages
   ngPackageNames.forEach(setPackageConfig);
   var config = {
-    baseURL: './wp-content/themes/ng-theme/',
+    // baseURL: './',
     map: map,
     packages: packages
   };

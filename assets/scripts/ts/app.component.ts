@@ -5,7 +5,7 @@ import { HeaderComponent } from './header.component';
 import { HomeComponent } from './home.component';
 import { PostsComponent } from './posts.component';
 import { CustomPostsComponent } from './custom-posts.component';
-import { SamplePageComponent } from './sample-page/sample-page.component';
+import { SamplePageComponent } from './sample-page.component';
 
 
 @Component({

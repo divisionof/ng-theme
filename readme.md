@@ -1,19 +1,19 @@
-run 'npm start' to run compile/watch ts and scss, as well as live reload via browser-sync
-
-required
+requirements
 - wp rest api plugin (http://v2.wp-api.org/)
-- rest api menus (https://wordpress.org/plugins/wp-api-menus/)
 
-includes
-- bootstrap (sass)
-- browser-sync
-- wordpress cpt class (https://github.com/jjgrainger/wp-custom-post-type-class)
+getting started
+- npm install
+- run 'gulp build'
+- add to /wp-content/themes folder
+- activate theme
+- change proxy name in gulp 'watch' task
+- all api calls will need path updates
 
-path updates on new project
-- package.json: --proxy name needs updated in 'b-sync' script
-- baseURl line 45 of systemjs.config.js
-- wp rest api calls
-
-stuff to do
-- bundle js?
-- understand systemjs.config.js
+gulp tasks
+- 'styles' to compile scss
+- 'polyfills' for minified shim + polyfills
+- 'ts-compile' to compile typescript
+- 'bundle' to build js file to serve via systemjs
+- 'watch' for scss and ts changes
+- 'clean' removes the /dist folder
+- 'build' cleans and runs a complete build
