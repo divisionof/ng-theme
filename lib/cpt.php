@@ -9,6 +9,5 @@ $custom_posts = new CPT(
     'slug'           => 'custom_posts'
 ],[
     'supports'       => ['title', 'editor'],
-    'menu_position'  => 6,
-    'show_in_rest'   => true
+    'menu_position'  => 6
 ]);

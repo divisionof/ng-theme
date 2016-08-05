@@ -413,11 +413,13 @@ class CPT {
 
         // Default options.
         $defaults = array(
-            'labels' => $labels,
-            'public' => true,
-            'rewrite' => array(
-                'slug' => $slug,
-            )
+            'labels'       => $labels,
+            'public'       => true,
+            'rewrite'      => array(
+                'slug'     => $slug,
+            ),
+            'show_in_rest' => true,
+            'rest_base'    => $slug,
         );
 
         // Merge user submitted options with defaults.
