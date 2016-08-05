@@ -419,7 +419,7 @@ class CPT {
                 'slug'     => $slug,
             ),
             'show_in_rest' => true,
-            'rest_base'    => $slug,
+            'rest_base'    => $slug
         );
 
         // Merge user submitted options with defaults.
@@ -517,11 +517,13 @@ class CPT {
 
         // Default options.
         $defaults = array(
-            'labels' => $labels,
-            'hierarchical' => true,
-            'rewrite' => array(
-                'slug' => $slug
-            )
+            'labels'          => $labels,
+            'hierarchical'    => true,
+            'rewrite'         => array(
+                'slug'        => $slug
+            ),
+            'show_in_rest'    => true
+            'rest_base'       => $slug
         );
 
         // Merge default options with user submitted options.
