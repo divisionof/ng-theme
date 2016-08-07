@@ -522,7 +522,7 @@ class CPT {
             'rewrite'         => array(
                 'slug'        => $slug
             ),
-            'show_in_rest'    => true
+            'show_in_rest'    => true,
             'rest_base'       => $slug
         );
 
