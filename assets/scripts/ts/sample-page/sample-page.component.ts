@@ -3,12 +3,7 @@ import { SamplePageService } from './sample-page.service';
 
 @Component({
   selector: 'sample-page',
-  template: `
-    <div *ngIf="page">
-      <h2>{{ page.title.rendered }}</h2>
-      <p [innerHTML]=page.content.rendered></p>
-    </div>
-  `,
+  templateUrl: './sample-page.component.html',
   providers: [SamplePageService]
 })
 export class SamplePageComponent implements OnInit {

@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
-import { MenuComponent } from './menu.component';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'header',
-  template: `
-    <h1>Site Title</h1>
-    <menu></menu>
-  `,
+  templateUrl: './header.component.html',
   directives: [MenuComponent]
 })
 export class HeaderComponent { }
