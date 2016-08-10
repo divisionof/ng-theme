@@ -16,4 +16,5 @@ gulp tasks
 - 'bundle' to build js file to serve via systemjs
 - 'watch' for scss and ts changes
 - 'clean' removes the /dist folder
+- 'clean-js' removes the /assets/scripts/js folder
 - 'build' cleans and runs a complete build

@@ -10,6 +10,7 @@ var SystemBuilder = require('systemjs-builder');
 var browserSync = require('browser-sync').create();
 var builder = new SystemBuilder();
 var tsProject = ts.createProject('tsconfig.json');
+var embedTemplates = require('gulp-angular-embed-templates');
 
 // compile sass w/ autoprefixing
 gulp.task('styles', function() {
@@ -35,6 +36,7 @@ gulp.task('polyfills', function() {
 // compile typescript
 gulp.task('ts-compile', function() {
   var tsResult = tsProject.src()
+    .pipe(embedTemplates())
     .pipe(ts(tsProject));
 
   return tsResult.js.pipe(gulp.dest('./assets/scripts/js'));
@@ -68,4 +70,14 @@ gulp.task('clean', function() {
 // complete build
 gulp.task('build', function(done) {
   runSequence('clean', 'styles', 'polyfills', 'bundle', done);
+});
+
+// clean before build
+gulp.task('clean-js', function() {
+  return del('./assets/scripts/js');
+});
+
+// complete build
+gulp.task('build', function(done) {
+  runSequence('clean', 'clean-js', 'styles', 'polyfills', 'bundle', done);
 });

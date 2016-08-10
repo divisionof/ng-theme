@@ -3,17 +3,7 @@ import { PostsService } from './posts.service';
 
 @Component({
   selector: 'posts',
-  template: `
-    <h2>Posts</h2>
-    <ul *ngIf="posts">
-      <li *ngFor="let post of posts">
-        <h1 (click)="showPost(post)">{{ post.title.rendered }}</h1>
-      </li>
-    </ul>
-    <div *ngIf="currentPost">
-      <p [innerHTML]=currentPost.content.rendered></p>
-    </div>
-  `,
+  templateUrl: './posts.component.html',
   providers: [PostsService]
 })
 export class PostsComponent implements OnInit {

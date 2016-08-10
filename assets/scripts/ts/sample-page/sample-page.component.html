@@ -1,0 +1,5 @@
+<h2>Sample Page</h2>
+<div *ngIf="page">
+  <h2>{{ page.title.rendered }}</h2>
+  <p [innerHTML]=page.content.rendered></p>
+</div>

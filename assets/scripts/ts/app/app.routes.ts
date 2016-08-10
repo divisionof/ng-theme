@@ -1,15 +1,15 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
-import { HomeComponent } from './home.component';
-import { PostsComponent } from './posts.component';
-import { CustomPostsComponent } from './custom-posts.component';
-import { SamplePageComponent } from './sample-page.component';
+import { FrontPageComponent } from '../front-page/front-page.component';
+import { PostsComponent } from '../blog/posts.component';
+import { CustomPostsComponent } from '../custom-posts/custom-posts.component';
+import { SamplePageComponent } from '../sample-page/sample-page.component';
 
 
 const routes: RouterConfig = [
   {
     path: '',
-    component: HomeComponent
+    component: FrontPageComponent
   },
   {
     path: 'posts',
