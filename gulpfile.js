@@ -71,3 +71,13 @@ gulp.task('clean', function() {
 gulp.task('build', function(done) {
   runSequence('clean', 'styles', 'polyfills', 'bundle', done);
 });
+
+// clean before build
+gulp.task('clean-js', function() {
+  return del('./assets/scripts/js');
+});
+
+// complete build
+gulp.task('build', function(done) {
+  runSequence('clean', 'clean-js', 'styles', 'polyfills', 'bundle', done);
+});
