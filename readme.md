@@ -1,6 +1,8 @@
 # ng-theme
 Angular2 based theme using WordPress backend
+
 ng-theme is currently in **Pre-Alpha**
+
 
 ## requirements
 - wp rest api plugin (http://v2.wp-api.org/)
