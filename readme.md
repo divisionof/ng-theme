@@ -1,7 +1,11 @@
-requirements
+# ng-theme
+Angular2 based theme using WordPress backend
+ng-theme is currently in **Pre-Alpha**
+
+## requirements
 - wp rest api plugin (http://v2.wp-api.org/)
 
-getting started
+## getting started
 - npm install
 - run 'gulp build'
 - add to /wp-content/themes folder
@@ -9,7 +13,7 @@ getting started
 - change proxy name in gulp 'watch' task
 - all api calls will need path updates
 
-gulp tasks
+## gulp tasks
 - 'styles' to compile scss
 - 'polyfills' for minified shim + polyfills
 - 'ts-compile' to compile typescript
@@ -18,3 +22,4 @@ gulp tasks
 - 'clean' removes the /dist folder
 - 'clean-js' removes the /assets/scripts/js folder
 - 'build' cleans and runs a complete build
+

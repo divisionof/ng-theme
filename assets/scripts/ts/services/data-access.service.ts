@@ -1,0 +1,1 @@
+export const WP_API_URL: string = "http://ngtheme.dev/wp-json/wp/v2/";
