@@ -1,10 +1,8 @@
 import { provideRouter, RouterConfig } from '@angular/router';
-
 import { FrontPageComponent } from '../front-page/front-page.component';
 import { PostsComponent } from '../blog/posts.component';
 import { CustomPostsComponent } from '../custom-posts/custom-posts.component';
-import { SamplePageComponent } from '../sample-page/sample-page.component';
-
+import { SinglePageComponent } from '../single-page/single-page.component';
 
 const routes: RouterConfig = [
   {
@@ -20,8 +18,10 @@ const routes: RouterConfig = [
     component: CustomPostsComponent
   },
   {
-    path: 'sample-page',
-    component: SamplePageComponent
+    // TODO: figure out how to handle pages vs posts
+    // maybe use an array of page slugs instead of a wildcard
+    path: '**',
+    component: SinglePageComponent
   }
 ];
 
