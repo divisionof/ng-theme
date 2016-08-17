@@ -1,0 +1,25 @@
+.example {
+  &__container {
+    @include outer-container();
+    margin-top: 20px;
+  }
+
+  &__row {
+    @include row();
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  &__grid-item {
+    @include span-columns(4);
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+  &__shift-item {
+    @include span-columns(8);
+    @include shift(2);
+    border: 1px solid black;
+    padding: 5px 0;
+  }
+}

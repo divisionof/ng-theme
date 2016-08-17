@@ -1,0 +1,23 @@
+<div class="example__container">
+  <div>Example Component (@include outer-container)</div>
+
+  <div class="example__row">
+    <div class="example__grid-item">
+      This component is meant to demonstrate a basic use of the Bourbon Neat grid system.
+    </div>
+    <div class="example__grid-item">
+      @include span-columns(4)
+    </div>
+    <div class="example__grid-item">
+      All grid layout in done in the stylesheet, so you can choose how to structure your markup.
+    </div>
+  </div>
+
+  <div class="example__row">
+    <div class="example__shift-item">
+      @include span-columns(8) <br/>
+      @include shift(2) <br/><br/>
+      You can find the stylesheet for this component in assets/styles/components/_example.scss
+    </div>
+  </div>
+</div>
