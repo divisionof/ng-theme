@@ -1,7 +1,7 @@
 <?php
 $lib_includes = [
   'lib/assets.php',    // Scripts and stylesheets
-  //'lib/setup.php',   	 // Theme setup
+  'lib/setup.php',   	 // Theme setup
   'lib/cpt.php',       // Custom Post Types
 ];
 
