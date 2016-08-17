@@ -1,5 +1,5 @@
 <?php
-include_once('cpt/CPT.php');
+require_once 'cpt/CPT.php';
 
 $custom_posts = new CPT(
 [
