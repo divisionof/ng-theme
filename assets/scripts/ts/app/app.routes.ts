@@ -3,7 +3,6 @@ import { FrontPageComponent } from '../front-page/front-page.component';
 import { PostsComponent } from '../blog/posts.component';
 import { CustomPostsComponent } from '../custom-posts/custom-posts.component';
 import { SinglePageComponent } from '../single-page/single-page.component';
-import { ExampleComponent } from '../example/example.component';
 
 const routes: RouterConfig = [
   {
@@ -17,10 +16,6 @@ const routes: RouterConfig = [
   {
     path: 'custom-posts',
     component: CustomPostsComponent
-  },
-  {
-    path: 'example',
-    component: ExampleComponent
   },
   {
     // TODO: figure out how to handle pages vs posts
