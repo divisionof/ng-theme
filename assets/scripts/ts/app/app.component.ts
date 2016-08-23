@@ -7,7 +7,6 @@ import { PostsComponent } from '../blog/posts.component';
 import { CustomPostsComponent } from '../custom-posts/custom-posts.component';
 import { SinglePageComponent } from '../single-page/single-page.component';
 
-
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',

@@ -1,1 +1,7 @@
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// http://meyerweb.com/eric/tools/css/reset/ as a scss partial
+@import "../../node_modules/node-reset-scss/scss/_reset";
+// bourbon neat grid framework: http://neat.bourbon.io/
+@import "../../node_modules/bourbon-neat/app/assets/stylesheets/_neat";
+
+@import "common/variables";
+@import "common/grid";

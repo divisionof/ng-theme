@@ -57,7 +57,7 @@ gulp.task('watch', function() {
     proxy: 'http://ng.dev'
   });
 
-  gulp.watch('./assets/styles/main.scss', ['styles']);
+  gulp.watch('./assets/styles/**/*.scss', ['styles']);
   gulp.watch('./assets/scripts/**/*.ts', ['bundle']);
   gulp.watch('./assets/scripts/**/*.html', ['bundle']);
   gulp.watch("./dist/js/bundle.js").on('change', browserSync.reload);
