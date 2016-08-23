@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SinglePageService } from './single-page.service';
+import { IMAGE_PATH } from '../services/data-access.service';
 
 @Component({
   selector: 'single-page',
@@ -12,10 +13,12 @@ export class SinglePageComponent implements OnInit {
 
   private page: Object;
   private route: string;
+  private do: string;
 
   ngOnInit() {
     this.route = this.router.url.substring(1); // trim leading slash
     this.showPage();
+    this.do = IMAGE_PATH+'do.png';
   }
 
   showPage() {
