@@ -1,0 +1,7 @@
+.grid {
+  @include outer-container();
+
+  &__row {
+    @include row();
+  }
+}

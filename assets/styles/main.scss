@@ -3,5 +3,5 @@
 // bourbon neat grid framework: http://neat.bourbon.io/
 @import "../../node_modules/bourbon-neat/app/assets/stylesheets/_neat";
 
-// components
-@import "components/example";
+@import "common/variables";
+@import "common/grid";
