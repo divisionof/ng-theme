@@ -11,6 +11,7 @@ var browserSync = require('browser-sync').create();
 var builder = new SystemBuilder();
 var tsProject = ts.createProject('tsconfig.json');
 var embedTemplates = require('gulp-angular-embed-templates');
+var imagemin = require('gulp-imagemin');
 
 // compile sass w/ autoprefixing
 gulp.task('styles', function() {
@@ -49,6 +50,18 @@ gulp.task('bundle', ['ts-compile'], function() {
     .then(function() {
       return builder.buildStatic('app', './dist/js/bundle.js');
     });
+});
+
+// run lossless compression on all the images
+gulp.task('images', function() {
+  return gulp.src('./assets/images/*')
+    .pipe(imagemin({
+      progressive: true,
+      interlaced: true,
+      svgoPlugins: [{removeUnknownsAndDefaults: false}, {cleanupIDs: false}]
+    }))
+    .pipe(gulp.dest('./dist/images/'))
+    .pipe(browserSync.stream());
 });
 
 // watch for scss and ts changes
